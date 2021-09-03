@@ -1,0 +1,88 @@
+{
+  "name": "insurance-web",
+  "version": "1.0.0",
+  "description": "Web app for Trevo insurance",
+  "main": "index.js",
+  "scripts": {
+    "test": "nothing yet",
+    "build:dev": "webpack --mode=development",
+    "build": "webpack --mode=production",
+    "dev": "webpack --mode=development && webpack serve --mode=development",
+    "start": "webpack serve --mode=production",
+    "lint": "eslint --ext .js --ext .jsx src",
+    "lint-fix": "eslint --ext .js --ext .jsx src --fix",
+    "prettier": "npx prettier --write src",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/socar-my/insurance-web.git"
+  },
+  "keywords": [
+    "insurance",
+    "motor-insurance",
+    "trevo"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "author": "Trevo InsureTech Squad",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/socar-my/insurance-web#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "classnames": "^2.3.1",
+    "dotenv": "^10.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-select": "^4.3.1",
+    "react-toggle": "^4.1.2",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-react-constant-elements": "^7.14.5",
+    "@babel/plugin-transform-react-inline-elements": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/runtime": "^7.15.3",
+    "@svgr/webpack": "^5.5.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "css-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "mini-css-extract-plugin": "^2.2.0",
+    "prettier": "^2.3.2",
+    "style-loader": "^3.2.1",
+    "terser-webpack-plugin": "^5.1.4",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
